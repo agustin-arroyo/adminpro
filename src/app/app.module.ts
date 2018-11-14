@@ -3,37 +3,28 @@ import { NgModule } from '@angular/core';
 
 // Routes
 import { APP_ROUTES } from './app.routes';
+
+// Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { NoPageFoundComponent } from './shared/no-page-found/no-page-found.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Graphs001Component } from './pages/graphs001/graphs001.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { SideBarComponent } from './shared/side-bar/side-bar.component';
-import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
-import { PagesComponent } from './pages/pages.component';
 import { RegisterComponent } from './login/register.component';
+
+// Modules
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    NoPageFoundComponent,
-    DashboardComponent,
-    ProgressComponent,
-    Graphs001Component,
-    HeaderComponent,
-    SideBarComponent,
-    BreadcrumbsComponent,
-    PagesComponent,
     RegisterComponent
   ],
   imports: [
     BrowserModule,
-    APP_ROUTES
+    APP_ROUTES,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
