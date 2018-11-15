@@ -1,3 +1,45 @@
-<p>
-  progress works!
-</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title">Progress bar 1 | {{ this.progress1 }}</h4>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.aria-valuenow]="progress1" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progress1 + '%'"></div>
+                </div>
+                <br>
+
+                <h4 class="card-title">Progress bar 2 | {{ this.progress2 }}</h4>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.aria-valuenow]="progress2" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progress2 + '%'"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row ">
+
+    <div class="col-6 ">
+        <div class="card ">
+            <div class="card-body ">
+                <app-change-progress-bar (changeProgressData)="updateProgressValue1( $event )" legend="Progress Azul" [progress]="progress1"></app-change-progress-bar>
+            </div>
+        </div>
+    </div>
+    <!-- End col-6 -->
+
+    <div class="col-6 ">
+        <div class="card ">
+            <div class="card-body ">
+                <app-change-progress-bar (changeProgressData)="updateProgressValue2( $event )" legend="Progreso Verde" [progress]="progress2"></app-change-progress-bar>
+            </div>
+        </div>
+    </div>
+    <!-- End col-6 -->
+
+</div>
+<!-- End row -->
