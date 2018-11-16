@@ -44,13 +44,14 @@ export class ChangeProgressBarComponent implements OnInit {
 
     console.log(this.progress);
     this.changeProgressData.emit( this.progress );
+    this.textProgress.nativeElement.focus();
 
   } // changeProgressValue
 
   onChangeValue( newalue: number ) {
 
     // let elementHTML: any = document.getElementsByName('progress')[0];
-    // console.log( this.textProgress );
+    console.log( 'onChangeValue' );
 
 
     if ( newalue >= 100) {
@@ -63,10 +64,9 @@ export class ChangeProgressBarComponent implements OnInit {
 
     // elementHTML.value = Number( this.progress );
 
-    this.textProgress.nativeElement.focus();
     this.textProgress.nativeElement.value = this.progress;
     this.changeProgressData.emit( this.progress );
-
+    this.textProgress.nativeElement.focus();
 
   }
 
