@@ -17,6 +17,7 @@ import { DoughnutChartComponent } from '../components/doughnut-chart/doughnut-ch
 
 // temporal
 import { ChangeProgressBarComponent } from '../components/change-progress-bar/change-progress-bar.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
 
@@ -26,7 +27,8 @@ import { ChangeProgressBarComponent } from '../components/change-progress-bar/ch
     Graphs001Component,
     PagesComponent,
     ChangeProgressBarComponent,
-    DoughnutChartComponent
+    DoughnutChartComponent,
+    AccountSettingsComponent
   ],
   exports: [
     DashboardComponent,
