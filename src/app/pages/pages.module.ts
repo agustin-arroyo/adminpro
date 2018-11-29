@@ -19,6 +19,10 @@ import { DoughnutChartComponent } from '../components/doughnut-chart/doughnut-ch
 import { ChangeProgressBarComponent } from '../components/change-progress-bar/change-progress-bar.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
+// promises
+import { PromisesComponent } from './promises/promises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+
 @NgModule({
 
   declarations: [
@@ -28,7 +32,9 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     PagesComponent,
     ChangeProgressBarComponent,
     DoughnutChartComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    PromisesComponent,
+    RxjsComponent
   ],
   exports: [
     DashboardComponent,
